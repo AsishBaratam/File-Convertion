@@ -6,6 +6,6 @@ RUN mvn clean package -DskipTests
 
 # Stage 2: Runtime
 FROM openjdk:21-jdk-slim
-COPY --from=build /app/target/practice-0.0.1-SNAPSHOT.jar practice.jar
+COPY --from=build /app/target/Document_Convertion-0.0.1-SNAPSHOT practice.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "practice.jar"]
